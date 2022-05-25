@@ -71,6 +71,7 @@ const AddRecipe = () => {
       body: JSON.stringify(Recipe)
     }).then(res => {
       console.log("Request complete! response:", res);
+      alert("Upload completed!");
     });
   }
 
@@ -90,7 +91,14 @@ const AddRecipe = () => {
       <a>Name:</a>
       <input type='text' id='name' placeholder='name' style={inp}></input><br></br>
       <a>Category:</a>
-      <input type='text' id='category' placeholder='category' style={inp}></input><br></br>
+      <select style={inp} name = "list-cat" id="category" >
+        <option value = "antipasto" selected>Antipasto</option>
+        <option value = "primo" selected>Primo</option>
+        <option value = "secondo">Secondo</option>
+        <option value = "contorno">Contorno</option>
+        <option value = "dolce">Dolce</option>
+        <option value = "cocktail">Cocktail</option>
+      </select><br></br>
       <a>Difficulty:</a>
       <input type='number' id='difficulty' placeholder='difficulty from 1 to 5 'style={inp}></input><br></br>
       <a>Time:</a>

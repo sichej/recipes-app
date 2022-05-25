@@ -83,15 +83,29 @@ const AddRecipe = () => {
   }
 
   const inp = {
-    marginTop: '15px'
+    marginTop: '7px'
+  }
+
+  const desc = {
+    display: "inline-block",
+    fontFamily: "Arial",
+    fontSize: "17px",
+    marginTop: "20px",
+  }
+
+  const sProcess = {
+    textAlign: "left",
+    marginTop: '7px',
+    width: "300px",
+    height: "400px"
   }
 
   
   return (
     <div style={container} id='main'>
-      <a>Name:</a>
+      <a style={desc} >Name:</a><br></br>
       <input type='text' id='name' placeholder='name' style={inp}></input><br></br>
-      <a>Category:</a>
+      <a style={desc} >Category:</a><br></br>
       <select style={inp} name = "list-cat" id="category" >
         <option value = "antipasto" selected>Antipasto</option>
         <option value = "primo" selected>Primo</option>
@@ -100,7 +114,7 @@ const AddRecipe = () => {
         <option value = "dolce">Dolce</option>
         <option value = "cocktail">Cocktail</option>
       </select><br></br>
-      <a>Difficulty:</a>
+      <a style={desc} >Difficulty:</a><br></br>
       <select style={inp} name = "list-dif" id="difficulty" >
         <option value = "1" selected>Very Easy</option>
         <option value = "2" selected>Easy</option>
@@ -108,13 +122,13 @@ const AddRecipe = () => {
         <option value = "4">Hard</option>
         <option value = "5">Very Hard</option>
       </select><br></br>
-      <a>Time:</a>
+      <a style={desc} >Time:</a><br></br>
       <input type='number' id='time' placeholder='time in minutes' style={inp}></input><br></br>
-      <a>Ingredients:</a>
+      <a style={desc} >Ingredients:</a><br></br>
       <input type='text' id='ingredients' placeholder='ingredients separated by comma' style={inp}></input><br></br>
-      <a>Process:</a>
-      <input type='text' id='process' placeholder='process' style={inp}></input><br></br>
-      <a>Image:</a>
+      <a style={desc} >Process:</a><br></br>
+      <input style={sProcess} type='text' id='process' placeholder='process'></input><br></br>
+      <a style={desc} >Image:</a><br></br>
       <input type="file" name="" id="fileId" style={inp} onChange={imageUploaded}/><br></br>
       <input type='submit' id="submit" value='Upload' style={inp} onClick={createIngredientsArray}></input>
       <img id="img"></img>

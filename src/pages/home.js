@@ -14,7 +14,6 @@ const Home = () => {
             try {
                 const response = await fetch(url);
                 const json = await response.json();
-                //console.log(JSON.stringify(json));
                 setAdvice(json);
             } catch (error) {
                 console.log("error", error);

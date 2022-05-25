@@ -9,7 +9,7 @@ const Home = () => {
   const navigate = useNavigate();
 
     useEffect(() => {
-        const url = "https://nodejs-recipesapi.herokuapp.com/api/recipes/";
+        const url = "https://nodejs-recipes-api.herokuapp.com/api/recipes/";
 
         const fetchData = async () => {
             try {

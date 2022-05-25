@@ -8,7 +8,7 @@ const Recipe = () => {
 
 
   useEffect(() => {
-    const url = "https://nodejs-recipesapi.herokuapp.com/api/recipes/"+id;
+    const url = "https://nodejs-recipes-api.herokuapp.com/api/recipes/"+id;
 
     const fetchData = async () => {
         try {

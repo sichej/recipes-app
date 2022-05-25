@@ -59,7 +59,7 @@ const AddRecipe = () => {
   }
 
   // url for the post request
-  const url = "https://nodejs-recipesapi.herokuapp.com/api/recipes/";
+  const url = "https://nodejs-recipes-api.herokuapp.com/api/recipes/";
   /**
    * makes the POST request with the Recipe Object
    * data are converted in JSON format to be accepted

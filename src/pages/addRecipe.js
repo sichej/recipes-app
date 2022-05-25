@@ -4,12 +4,10 @@ import { useNavigate } from 'react-router-dom';
 const AddRecipe = () => {
 
   const navigate = useNavigate();
-
   const Recipe = new Object();
-
   // array of ingredients 
   let ingredientsArray = [];
-  
+
   /**
    * creates from ingredients input box the array of ingredients
    * call createObject
@@ -20,8 +18,6 @@ const AddRecipe = () => {
     ingredientsArray = ingredients.split(',');
 
     createObject();
-
-    // check if the recipes is completed
     uploadData();
   }
 
@@ -62,6 +58,7 @@ const AddRecipe = () => {
 
   // url for the post request
   const url = "https://nodejs-recipes-api.herokuapp.com/api/recipes/";
+
   /**
    * makes the POST request with the Recipe Object
    * data are converted in JSON format to be accepted

@@ -1,6 +1,5 @@
 import React, { useEffect, useState } from "react";
 import { useParams } from 'react-router-dom';
-import spaghetti from '../img/spaghetti.png';
   
 const Recipe = () => {
   const { id } = useParams();

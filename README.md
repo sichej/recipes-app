@@ -1,7 +1,8 @@
 # recipes-app
 Frontend application made with ReactJs framework
+If you want to try it you don't need to download and run the backend, I hosted on Heroku so just follow the guide at the end of the instructions.
 
-### Introduction
+### Introductions
 This is a project for 2021/2022 class of Tecnologie Internet at UniPr held by Professor Michele Amoretti, this is only the Frontend part, the other part is the backend made with Express.
 
 This web application in the home screen shows the full list of recipes on the Database, it shows actually only a preview of them, just an image, the name and the difficulty level out of 5.

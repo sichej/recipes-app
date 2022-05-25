@@ -1,6 +1,6 @@
 # recipes-app
 Frontend application made with ReactJs framework
-If you want to try it I hosted on Heroku, so go and [try it](https://reactjs-recipes-app.herokuapp.com/home)
+If you want to try it I hosted on Heroku, so go and [Try it](https://reactjs-recipes-app.herokuapp.com/home)
 
 ### Introductions
 This is a project for 2021/2022 class of Tecnologie Internet at UniPr held by Professor Michele Amoretti, this is only the Frontend part, the other part is the backend made with Express.

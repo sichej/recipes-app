@@ -79,6 +79,7 @@ const AddRecipe = () => {
    * Styles
    */
   const container = {
+    textAlign: 'center',
   }
 
   const inp = {

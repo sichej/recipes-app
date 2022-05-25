@@ -100,7 +100,13 @@ const AddRecipe = () => {
         <option value = "cocktail">Cocktail</option>
       </select><br></br>
       <a>Difficulty:</a>
-      <input type='number' id='difficulty' placeholder='difficulty from 1 to 5 'style={inp}></input><br></br>
+      <select style={inp} name = "list-dif" id="difficulty" >
+        <option value = "1" selected>Very Easy</option>
+        <option value = "2" selected>Easy</option>
+        <option value = "3">Medium</option>
+        <option value = "4">Hard</option>
+        <option value = "5">Very Hard</option>
+      </select><br></br>
       <a>Time:</a>
       <input type='number' id='time' placeholder='time in minutes' style={inp}></input><br></br>
       <a>Ingredients:</a>

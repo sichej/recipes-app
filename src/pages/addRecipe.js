@@ -100,6 +100,13 @@ const AddRecipe = () => {
     height: "400px"
   }
 
+  const sIngredients = {
+    textAlign: "left",
+    marginTop: '7px',
+    width: "300px",
+    height: "150px"
+  }
+
   
   return (
     <div style={container} id='main'>
@@ -125,7 +132,7 @@ const AddRecipe = () => {
       <a style={desc} >Time:</a><br></br>
       <input type='number' id='time' placeholder='time in minutes' style={inp}></input><br></br>
       <a style={desc} >Ingredients:</a><br></br>
-      <input type='text' id='ingredients' placeholder='ingredients separated by comma' style={inp}></input><br></br>
+      <input type='text' id='ingredients' placeholder='ingredients separated by comma' style={sIngredients}></input><br></br>
       <a style={desc} >Process:</a><br></br>
       <input style={sProcess} type='text' id='process' placeholder='process'></input><br></br>
       <a style={desc} >Image:</a><br></br>

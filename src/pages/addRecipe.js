@@ -9,6 +9,7 @@ const AddRecipe = () => {
 
   // array of ingredients 
   let ingredientsArray = [];
+  
   /**
    * creates from ingredients input box the array of ingredients
    * call createObject
@@ -19,6 +20,8 @@ const AddRecipe = () => {
     ingredientsArray = ingredients.split(',');
 
     createObject();
+
+    // check if the recipes is completed
     uploadData();
   }
 
@@ -72,6 +75,7 @@ const AddRecipe = () => {
     }).then(res => {
       console.log("Request complete! response:", res);
       alert("Upload completed!");
+      window.location.reload();
     });
   }
 
@@ -83,7 +87,8 @@ const AddRecipe = () => {
   }
 
   const inp = {
-    marginTop: '7px'
+    marginTop: '7px',
+    width: "70px"
   }
 
   const desc = {
@@ -107,11 +112,36 @@ const AddRecipe = () => {
     height: "150px"
   }
 
+  const sBtn = {
+    marginTop: '20px',
+    fontFamily: "-apple-system, BlinkMacSystemFont, 'Roboto', sans-serif",
+    borderRadius: "6px",
+    border: "none",
+    color: "#fff",
+    background: "linear-gradient(180deg, #4B91F7 0%, #367AF6 100%)",
+    backgroundOrigin: "border-box",
+    boxShadow: "0px 0.5px 1.5px rgba(54, 122, 246, 0.25), inset 0px 0.8px 0px -0.25px rgba(255, 255, 255, 0.2)",
+    width: "160px",
+    height: "70px"
+  }
+
+  const sName = {
+    textAlign: "left",
+    marginTop: '7px',
+    width: "300px",
+    height: "20px"
+  }
+
+  const sImageBtn = {
+    marginTop: '7px',
+    width: "200px"
+  }
+
   
   return (
     <div style={container} id='main'>
       <a style={desc} >Name:</a><br></br>
-      <input type='text' id='name' placeholder='name' style={inp}></input><br></br>
+      <input type='text' id='name' placeholder='name' style={sName}></input><br></br>
       <a style={desc} >Category:</a><br></br>
       <select style={inp} name = "list-cat" id="category" >
         <option value = "antipasto" selected>Antipasto</option>
@@ -132,13 +162,12 @@ const AddRecipe = () => {
       <a style={desc} >Time:</a><br></br>
       <input type='number' id='time' placeholder='time in minutes' style={inp}></input><br></br>
       <a style={desc} >Ingredients:</a><br></br>
-      <input type='text' id='ingredients' placeholder='ingredients separated by comma' style={sIngredients}></input><br></br>
+      <textarea id='ingredients' placeholder='ingredients separated by comma' style={sIngredients}></textarea><br></br>
       <a style={desc} >Process:</a><br></br>
-      <input style={sProcess} type='text' id='process' placeholder='process'></input><br></br>
+      <textarea id='process' placeholder='process of the recipe' style={sProcess}></textarea><br></br>
       <a style={desc} >Image:</a><br></br>
-      <input type="file" name="" id="fileId" style={inp} onChange={imageUploaded}/><br></br>
-      <input type='submit' id="submit" value='Upload' style={inp} onClick={createIngredientsArray}></input>
-      <img id="img"></img>
+      <input type="file" name="image" id="fileId" style={sImageBtn} onChange={imageUploaded}/><br></br>
+      <input type='submit' id="submit" value='Upload' style={sBtn} onClick={createIngredientsArray}></input><br></br>
     </div>
   );
 };

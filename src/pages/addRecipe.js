@@ -20,6 +20,7 @@ const AddRecipe = () => {
     createObject();
     uploadData();
   }
+  
 
   // base64 strng of the image
   let base64String = "";
@@ -56,6 +57,7 @@ const AddRecipe = () => {
     Recipe.img = base64String;
   }
 
+
   // url for the post request
   const url = "https://nodejs-recipes-api.herokuapp.com/api/recipes/";
 
@@ -75,6 +77,7 @@ const AddRecipe = () => {
       window.location.reload();
     });
   }
+
 
   /**
    * Styles
@@ -140,18 +143,18 @@ const AddRecipe = () => {
       <a style={desc} >Name:</a><br></br>
       <input type='text' id='name' placeholder='name' style={sName}></input><br></br>
       <a style={desc} >Category:</a><br></br>
-      <select style={inp} name = "list-cat" id="category" >
-        <option value = "antipasto" selected>Antipasto</option>
-        <option value = "primo" selected>Primo</option>
+      <select defaultValue="primo" style={inp} name = "list-cat" id="category" >
+        <option value = "antipasto">Antipasto</option>
+        <option value = "primo">Primo</option>
         <option value = "secondo">Secondo</option>
         <option value = "contorno">Contorno</option>
         <option value = "dolce">Dolce</option>
         <option value = "cocktail">Cocktail</option>
       </select><br></br>
       <a style={desc} >Difficulty:</a><br></br>
-      <select style={inp} name = "list-dif" id="difficulty" >
-        <option value = "1" selected>Very Easy</option>
-        <option value = "2" selected>Easy</option>
+      <select defaultValue="2" style={inp} name = "list-dif" id="difficulty" >
+        <option value = "1">Very Easy</option>
+        <option value = "2">Easy</option>
         <option value = "3">Medium</option>
         <option value = "4">Hard</option>
         <option value = "5">Very Hard</option>

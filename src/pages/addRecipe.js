@@ -137,13 +137,17 @@ const AddRecipe = () => {
     width: "200px"
   }
 
+  const sCatDiff = {
+    width: "100px"
+  }
+
   
   return (
     <div style={container} id='main'>
       <a style={desc} >Name:</a><br></br>
       <input type='text' id='name' placeholder='name' style={sName}></input><br></br>
       <a style={desc} >Category:</a><br></br>
-      <select defaultValue="primo" style={inp} name = "list-cat" id="category" >
+      <select defaultValue="primo" style={sCatDiff} name = "list-cat" id="category" >
         <option value = "antipasto">Antipasto</option>
         <option value = "primo">Primo</option>
         <option value = "secondo">Secondo</option>
@@ -152,7 +156,7 @@ const AddRecipe = () => {
         <option value = "cocktail">Cocktail</option>
       </select><br></br>
       <a style={desc} >Difficulty:</a><br></br>
-      <select defaultValue="2" style={inp} name = "list-dif" id="difficulty" >
+      <select defaultValue="2" style={sCatDiff} name = "list-dif" id="difficulty" >
         <option value = "1">Very Easy</option>
         <option value = "2">Easy</option>
         <option value = "3">Medium</option>

@@ -1,7 +1,9 @@
 import React, { useEffect, useState } from "react";
 import { useParams } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
   
 const Recipe = () => {
+  const navigate = useNavigate();
   const { id } = useParams();
   const [advice, setAdvice] = useState([]);
 
@@ -13,7 +15,13 @@ const Recipe = () => {
         try {
             const response = await fetch(url);
             const json = await response.json();
-            setAdvice(JSON.parse(JSON.stringify(json)));
+            if(response.status === 200)
+              setAdvice(JSON.parse(JSON.stringify(json)));
+            else{
+              alert("No such recipe");
+              navigate('/home');
+            }
+              
         } catch (error) {
             console.log("error", error);
         }
